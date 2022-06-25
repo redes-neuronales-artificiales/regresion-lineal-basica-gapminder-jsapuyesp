@@ -59,10 +59,11 @@ def pregunta_02():
     print(f'{df["life"].mean():.4f}')
 
     # Imprima el tipo de dato de la columna `fertility`.
-    print(df["fertility"])
+    print(type(df["fertility"]))
 
     # Imprima la correlación entre las columnas `GDP` y `life` con 4 decimales.
     print(f'{np.array(df[["GDP","life"]].corr())[0][1]:.4f}')
+
 
 
 def pregunta_03():
