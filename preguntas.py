@@ -15,7 +15,7 @@ def pregunta_01():
     Complete el código presentado a continuación.
     """
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
-    df = ____
+    df = pd.read_csv('gm_2008_region.csv')
 
     # Asigne la columna "life" a `y` y la columna "fertility" a `X`
     y = df["life"].values
@@ -76,9 +76,11 @@ def pregunta_03():
 
     # Asigne a la variable los valores de la columna `fertility`
     X_fertility = df["fertility"].values
+    X_fertility = X_fertility.reshape(X_fertility.shape[0],1)
 
     # Asigne a la variable los valores de la columna `life`
     y_life = df["life"].values
+    y_life = y_life.reshape(y_life.shape[0],1)
 
     # Importe LinearRegression
     from sklearn.linear_model import LinearRegression
@@ -121,9 +123,11 @@ def pregunta_04():
 
     # Asigne a la variable los valores de la columna `fertility`
     X_fertility = df["fertility"].values
+    X_fertility = X_fertility.reshape(X_fertility.shape[0],1)
 
     # Asigne a la variable los valores de la columna `life`
     y_life = df["life"].values
+    y_life = y_life.reshape(y_life.shape[0],1)
 
     # Divida los datos de entrenamiento y prueba. La semilla del generador de números
     # aleatorios es 53. El tamaño de la muestra de entrenamiento es del 80%
