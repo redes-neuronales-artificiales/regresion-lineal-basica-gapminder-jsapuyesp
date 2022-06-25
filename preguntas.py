@@ -93,6 +93,7 @@ def pregunta_03():
     prediction_space = np.linspace(
         max(X_fertility),
         min(X_fertility),
+        X_fertility.shape[0]
     ).reshape(X_fertility.shape[0], 1)
 
     # Entrene el modelo usando X_fertility y y_life
